@@ -18,6 +18,20 @@ export class UserDataService {
     );
   }
 
+  getUserInfoById(id: string) {
+    const promise = new Promise(
+      (resolve, reject) => {
+        const dbRef = firebase.database().ref('user-info' + id);
+        dbRef.once('value').then(
+          (dataSnapshot) => {
+            resolve(<firebase.User>dataSnapshot.value);
+          }
+        );
+      }
+    );
+    return promise;
+  }
+
   createNewUserWithEmail(id: string, email: string) {
   // Returns promise, resolves when user successfully written to DB
 

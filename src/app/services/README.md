@@ -20,5 +20,6 @@ None.
 
 ### Methods
 **getAllUsers()** returns all users in database/users.  
+**getUserInfoById()** returns the user-info for a given $uid.  
 **createNewUserWithEmail()** creates a new User object at database/users/$uid, returns a promise which resolves *void* upon successful database write.  
 **addInfoToUser()** creates a new UserInfo object at database/user-info/$uid, returns a promise which resolves *void* upon successful database write.

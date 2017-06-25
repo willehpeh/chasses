@@ -1,0 +1,5 @@
+<h1>Posts</h1>
+<div class="list-group" *ngIf="postList.length > 0">
+  <app-post *ngFor="let post of postList" [post]="post.post" [key]="post.key"></app-post>
+</div>
+<p *ngIf="postList.length <= 0">No posts yet!</p>

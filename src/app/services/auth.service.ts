@@ -41,6 +41,9 @@ export class AuthService {
           (user: firebase.User) => {
             this.currentUser = user;
             resolve();
+          },
+          (error) => {
+            reject(error);
           }
         );
       }
@@ -63,6 +66,9 @@ export class AuthService {
                 resolve();
               }
             );
+          },
+          (error) => {
+            reject(error);
           }
         );
       }

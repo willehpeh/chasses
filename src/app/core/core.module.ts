@@ -15,18 +15,9 @@ import { AuthGuard } from '../services/guards/auth.guard';
 // Component imports
 import { HeaderComponent } from './header/header.component';
 
-// TEST COMPONENTS!!! REMOVE FOR PRODUCTION!!! =================================
-import { HomeComponent } from '../test/home/home.component';
-import { NotFoundComponent } from '../test/not-found/not-found.component';
-// TEST COMPONENTS!!! REMOVE FOR PRODUCTION!!! =================================
-
 @NgModule({
   declarations: [
-    // TEST COMPONENTS!!! REMOVE FOR PRODUCTION!!! =================================
-    HomeComponent,
-    NotFoundComponent,
     HeaderComponent
-    // TEST COMPONENTS!!! REMOVE FOR PRODUCTION!!! =================================
   ],
   imports: [
     CommonModule,

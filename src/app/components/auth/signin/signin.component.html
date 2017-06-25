@@ -2,6 +2,7 @@
   <h1>
     Sign In
   </h1>
+  <div class="alert alert-danger" role="alert" *ngIf="alertMsg && alertMsg !== ''">{{ alertMsg }}</div>
   <form [formGroup]="signinForm" (ngSubmit)="onSignin()">
     <div class="form-group">
       <label for="email">Adresse mail</label>

@@ -17,6 +17,7 @@ import { PasswordValidation } from '../password.validator';
 export class SignupComponent implements OnInit {
 
   signupForm: FormGroup;
+  alertMsg: string;
 
   constructor(
     private authService: AuthService,
@@ -48,6 +49,9 @@ export class SignupComponent implements OnInit {
       () => {
         this.signupForm.reset();
         this.router.navigate(['/']);
+      },
+      (error) => {
+        this.alertMsg = error.message;
       }
     );
   }
